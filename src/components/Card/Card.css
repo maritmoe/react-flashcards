@@ -1,0 +1,27 @@
+.flashcard {
+  width: 30%;
+  height: 300px;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 2%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: bisque;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.flashcard:active {
+  transform: rotateY(180deg);
+}
+
+.question {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.answer {
+  font-size: 25px;
+}

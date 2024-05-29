@@ -11,13 +11,17 @@ function Card({ card }) {
   };
 
   return (
-    <li className="flashcard" onClick={handleClick}>
+    <li
+      className="flashcard"
+      title="click on the card to flip it"
+      onClick={handleClick}
+    >
       {flip ? (
         <p className="answer">{card.answer}</p>
       ) : (
         <p className="question">{card.question}</p>
       )}
-      <button className="icon" title="click on card to flip">
+      <button className="icon" aria-label="click to flip">
         <Autorenew />
       </button>
     </li>

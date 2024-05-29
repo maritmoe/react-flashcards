@@ -6,7 +6,7 @@ function CardList({ cards }) {
   return (
     <ul className="flashcard-list">
       {cards.map((card) => (
-        <Card key={card} card={card} />
+        <Card key={card.question} card={card} />
       ))}
     </ul>
   );

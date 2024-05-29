@@ -25,3 +25,16 @@
 .answer {
   font-size: 25px;
 }
+
+.icon {
+  background-color: transparent;
+  border: transparent;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.icon:hover {
+  cursor: pointer;
+}

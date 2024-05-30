@@ -2,6 +2,7 @@
 
 - Initial project made with `npm create vite@latest react-flashcards --template react`.
 - Icons from material ui is used, was installed with `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`.
+- React Router DOM installed with `npm install react-router-dom`.
 
 ## How to use
 

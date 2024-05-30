@@ -8,6 +8,24 @@
   text-shadow: 0.5px 0.5px 3px light-dark(lavenderblush, teal);
 }
 
+h2 {
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0.5px 0.5px 3px light-dark(lavenderblush, teal);
+}
+
+#home-link {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
+
+#create-quiz-link {
+  position: fixed;
+  left: 100px;
+  top: 20px;
+}
+
 body {
   background-color: light-dark(lightpink, cadetblue);
   color: light-dark(black, white);

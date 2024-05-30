@@ -1,9 +1,14 @@
+:root {
+  color-scheme: light dark;
+}
+
 #title {
   text-align: center;
   font-size: 40px;
-  text-shadow: 0.5px 0.5px 3px bisque;
+  text-shadow: 0.5px 0.5px 3px light-dark(lavenderblush, teal);
 }
 
 body {
-  background-color: teal;
+  background-color: light-dark(lightpink, cadetblue);
+  color: light-dark(black, white);
 }

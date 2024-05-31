@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { environment } from "../../environment/environment";
-import EditCardList from "../EditCardList/EditCardList";
 import { useNavigate, useParams } from "react-router-dom";
 import { Delete } from "@mui/icons-material";
+import CreateCard from "../CreateQuiz/CreateCard/CreateCard";
+import "./EditQuiz.css";
 
 function EditQuiz() {
   const { quizId } = useParams();
@@ -82,9 +83,11 @@ function EditQuiz() {
           <button type="submit">Edit Quiz Title</button>
         </form>
       )}
-      {quizData.id && <EditCardList cards={quizData.cards} />}
       {quizData.id && (
-        <button onClick={handleDelete}>
+        <CreateCard quizId={quizData.id} initialCards={quizData.cards} />
+      )}
+      {quizData.id && (
+        <button className="delete-button" onClick={handleDelete}>
           Delete Quiz <br />
           <Delete />
         </button>

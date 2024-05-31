@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { environment } from "../../../environment/environment";
 import EditCardList from "../../EditCardList/EditCardList";
 
-function CreateCard({ quizId }) {
-  const [addCard, setAddCard] = useState(true);
-  const [cards, setCards] = useState([]);
+function CreateCard({ quizId, initialCards }) {
+  const [addCard, setAddCard] = useState(false);
+  const [cards, setCards] = useState(initialCards);
   const [cardFormData, setCardFormData] = useState({
     quizId: quizId,
     question: "",
@@ -86,4 +86,5 @@ export default CreateCard;
 
 CreateCard.propTypes = {
   quizId: PropTypes.number,
+  initialCards: PropTypes.array,
 };

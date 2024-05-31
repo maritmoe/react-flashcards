@@ -47,7 +47,7 @@ function CreateQuiz() {
         />
         <button type="submit">Create Quiz Title</button>
       </form>
-      {quizId && <CreateCard quizId={quizId} />}
+      {quizId && <CreateCard quizId={quizId} initialCards={[]} />}
     </div>
   );
 }

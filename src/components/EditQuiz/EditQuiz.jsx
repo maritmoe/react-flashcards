@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { environment } from "../../environment/environment";
 import EditCardList from "../EditCardList/EditCardList";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { Delete } from "@mui/icons-material";
 
 function EditQuiz() {
   const { quizId } = useParams();
   const [quizData, setQuizData] = useState({ id: "", title: "", cards: [] });
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchQuiz();
@@ -43,20 +45,50 @@ function EditQuiz() {
     }
   };
 
+  const handleDelete = () => {
+    fetch(`${environment.QuizApiUrl}/${quizId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          response
+            .json()
+            .then((data) =>
+              alert(`Quiz with title: ${data.title} was deleted`)
+            );
+          navigate("/");
+        } else {
+          response.json().then((data) => setError(data));
+        }
+      })
+      .then((data) => console.log(data));
+  };
+
   return (
     <div className="main-div">
       <h2>Edit Quiz</h2>
       {error && <span className="error">{error}</span>}
-      <form onSubmit={handleSubmit}>
-        <input
-          name="title"
-          value={quizData.title}
-          type="text"
-          onChange={handleTitleChange}
-        />
-        <button type="submit">Edit Quiz Title</button>
-      </form>
-      {quizId && <EditCardList cards={quizData.cards} />}
+      {quizData.title && (
+        <form onSubmit={handleSubmit}>
+          <input
+            name="title"
+            value={quizData.title}
+            type="text"
+            onChange={handleTitleChange}
+          />
+          <button type="submit">Edit Quiz Title</button>
+        </form>
+      )}
+      {quizData.id && <EditCardList cards={quizData.cards} />}
+      {quizData.id && (
+        <button onClick={handleDelete}>
+          Delete Quiz <br />
+          <Delete />
+        </button>
+      )}
     </div>
   );
 }

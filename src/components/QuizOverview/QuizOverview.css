@@ -1,0 +1,8 @@
+.overview-item {
+  margin: auto;
+  width: 500px;
+  padding: 10px;
+  border-radius: 8px;
+  border: dotted;
+  margin-bottom: 20px;
+}

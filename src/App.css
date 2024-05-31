@@ -52,3 +52,7 @@ button {
   width: 90%;
   text-align: center;
 }
+
+li {
+  list-style: none;
+}

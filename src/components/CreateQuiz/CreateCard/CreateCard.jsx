@@ -22,28 +22,28 @@ function CreateCard({ quizId, initialCards }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(cardFormData),
-      })
-        .then((response) => {
-          if (response.status === 200) {
-            response
-              .json()
-              .then((data) =>
-                setCards([
-                  ...cards,
-                  { id: data.id, question: data.question, answer: data.answer },
-                ])
-              );
-            setCardFormData({
-              quizId: quizId,
-              question: "",
-              answer: "",
-            });
-            setAddCard(false);
-          } else {
-            response.json().then((data) => setError(data));
-          }
-        })
-        .then((data) => console.log(data));
+      }).then((response) => {
+        if (response.status === 200) {
+          response.json().then((data) =>
+            setCards([
+              ...cards,
+              {
+                cardId: data.id,
+                question: data.question,
+                answer: data.answer,
+              },
+            ])
+          );
+          setCardFormData({
+            quizId: quizId,
+            question: "",
+            answer: "",
+          });
+          setAddCard(false);
+        } else {
+          response.json().then((data) => setError(data));
+        }
+      });
     }
   };
 

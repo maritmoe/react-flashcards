@@ -5,7 +5,7 @@ function EditCardList({ cards }) {
   return (
     <ul>
       {cards.map((card) => (
-        <EditCard key={card.id} card={card} />
+        <EditCard key={card.cardId} card={card} />
       ))}
     </ul>
   );

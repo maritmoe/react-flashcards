@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { environment } from "../../environment/environment";
-import "./CreateQuiz.css";
 import CreateCard from "./CreateCard/CreateCard";
 
 function CreateQuiz() {
@@ -35,7 +34,7 @@ function CreateQuiz() {
   };
 
   return (
-    <div className="create-quiz-div">
+    <div className="main-div">
       <h2>Create Quiz</h2>
       {error && <span className="error">{error}</span>}
       <form onSubmit={handlesubmit}>

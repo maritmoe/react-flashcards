@@ -46,3 +46,9 @@ button {
 .error {
   color: red;
 }
+
+.main-div {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}

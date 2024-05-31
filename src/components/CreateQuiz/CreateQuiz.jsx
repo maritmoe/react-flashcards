@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { environment } from "../../environment/environment";
+import "./CreateQuiz.css";
+import CreateCard from "./CreateCard/CreateCard";
 
 function CreateQuiz() {
   const [quizTitle, setQuizTitle] = useState({ title: "" });
+  const [quizId, setQuizId] = useState("");
+  const [error, setError] = useState("");
 
   const handleTitleChange = (event) => {
     const { name, value } = event.target;
@@ -11,7 +15,6 @@ function CreateQuiz() {
 
   const handlesubmit = (event) => {
     event.preventDefault();
-    fetch(`${environment.QuizApiUrl}`);
     if (quizTitle) {
       fetch(`${environment.QuizApiUrl}`, {
         method: "POST",
@@ -20,18 +23,24 @@ function CreateQuiz() {
         },
         body: JSON.stringify(quizTitle),
       })
-        .then((response) => response.json())
+        .then((response) => {
+          if (response.status === 200) {
+            response.json().then((data) => setQuizId(data.id));
+          } else {
+            response.json().then((data) => setError(data));
+          }
+        })
         .then((data) => console.log(data));
     }
   };
 
-  //TODO: when title is succedded, a create card component can be added
-
   return (
-    <div>
+    <div className="create-quiz-div">
       <h2>Create Quiz</h2>
+      {error && <span className="error">{error}</span>}
       <form onSubmit={handlesubmit}>
         <input
+          placeholder="Title"
           name="title"
           value={quizTitle.title}
           type="text"
@@ -39,6 +48,7 @@ function CreateQuiz() {
         />
         <button type="submit">Create Quiz Title</button>
       </form>
+      {quizId && <CreateCard quizId={quizId} />}
     </div>
   );
 }

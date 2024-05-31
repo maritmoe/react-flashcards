@@ -1,0 +1,13 @@
+.editcard {
+  width: 30%;
+  height: 130px;
+  text-align: center;
+  border-radius: 8px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: light-dark(lavenderblush, teal);
+  transition: 0.8s;
+  transform-style: preserve-3d;
+  list-style: none;
+}

@@ -30,3 +30,19 @@ body {
   background-color: light-dark(lightpink, cadetblue);
   color: light-dark(black, white);
 }
+
+button,
+input {
+  background-color: light-dark(lavenderblush, teal);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px 5px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}

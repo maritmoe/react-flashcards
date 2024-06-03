@@ -86,10 +86,26 @@ function EditCard({ card }) {
               </div>
               <div>
                 <button type="submit" className="editcard-button">
-                  Edit Card <Edit />{" "}
+                  Edit Card{" "}
+                  <Edit
+                    sx={{
+                      position: "relative",
+                      top: "2px",
+                      width: "19px",
+                      height: "19px",
+                    }}
+                  />
                 </button>
                 <button onClick={handleDelete} className="editcard-button">
-                  Delete Card <Delete />
+                  Delete Card{" "}
+                  <Delete
+                    sx={{
+                      position: "relative",
+                      top: "3px",
+                      width: "19px",
+                      height: "19px",
+                    }}
+                  />
                 </button>
               </div>
             </form>

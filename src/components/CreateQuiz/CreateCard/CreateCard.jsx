@@ -76,7 +76,7 @@ function CreateCard({ quizId, initialCards }) {
         </form>
       )}
       {!addCard && (
-        <button onClick={() => setAddCard(true)}>Add a new card</button>
+        <button onClick={() => setAddCard(true)}>Add New Card</button>
       )}
     </div>
   );

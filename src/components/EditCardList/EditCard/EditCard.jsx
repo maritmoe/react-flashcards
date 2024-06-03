@@ -10,6 +10,7 @@ function EditCard({ card }) {
     answer: card.answer,
   });
   const [error, setError] = useState("");
+  const [isDeleted, setIsDeleted] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,7 +34,6 @@ function EditCard({ card }) {
     setCardFormData({ ...cardFormData, [name]: value });
   };
 
-  //TODO: reload when a card is deleted so it does not show in the list
   const handleDelete = () => {
     fetch(`${environment.CardApiUrl}/${card.cardId}`, {
       method: "DELETE",
@@ -45,6 +45,7 @@ function EditCard({ card }) {
         response.json().then((data) => {
           alert(`Question: ${data.question} was deleted`);
         });
+        setIsDeleted(true);
       } else {
         response.json().then((data) => setError(data));
       }
@@ -53,7 +54,7 @@ function EditCard({ card }) {
 
   return (
     <>
-      {card.cardId && (
+      {card.cardId && !isDeleted && (
         <li key={card.cardId} className="editcard">
           {error && <span className="error">{error}</span>}
           {cardFormData.question && (

@@ -38,7 +38,7 @@ input {
   background-color: light-dark(lavenderblush, teal);
   border-radius: 4px;
   padding: 10px;
-  margin: 5px 5px;
+  margin: 5px;
   font-size: 18px;
 }
 
@@ -57,6 +57,7 @@ button {
   font-size: 18px;
 }
 
-li {
+ul {
   list-style: none;
+  padding: 0;
 }

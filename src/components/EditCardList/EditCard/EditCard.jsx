@@ -59,7 +59,9 @@ function EditCard({ card }) {
           {cardFormData.question && (
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="question">Question:</label>
+                <label htmlFor="question" className="edit-card-label">
+                  Question:
+                </label>
                 <input
                   className="edit-card-input"
                   id="question"
@@ -70,7 +72,9 @@ function EditCard({ card }) {
                 />
               </div>
               <div>
-                <label htmlFor="answer">Answer:</label>
+                <label htmlFor="answer" className="edit-card-label">
+                  Answer:
+                </label>
                 <input
                   className="edit-card-input"
                   id="answer"

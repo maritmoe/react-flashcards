@@ -30,10 +30,10 @@ function QuizOverview() {
             <li key={quiz.quizId} className="overview-item">
               <h3>{quiz.title}</h3>
               <button onClick={() => navigate(`/view/${quiz.quizId}`)}>
-                Click here to play
+                View Quiz
               </button>
               <button onClick={() => navigate(`/edit/${quiz.quizId}`)}>
-                Click here to edit quiz
+                Edit Quiz
               </button>
             </li>
           ))}

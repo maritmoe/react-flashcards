@@ -1,6 +1,6 @@
 .editcard {
   width: 30%;
-  height: 200px;
+  height: 210px;
   text-align: center;
   border-radius: 8px;
   margin: auto;
@@ -13,12 +13,16 @@
   font-size: 18px;
 }
 
+.edit-card-label {
+  position: relative;
+  right: 120px;
+}
+
 .edit-card-input {
-  width: 80%;
+  width: 90%;
   background-color: light-dark(lightpink, cadetblue);
 }
 
 .editcard-button {
-  margin: 50px;
   background-color: light-dark(lightpink, cadetblue);
 }

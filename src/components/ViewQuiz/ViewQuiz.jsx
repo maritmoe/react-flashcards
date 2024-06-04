@@ -24,7 +24,7 @@ function ViewQuiz() {
   };
 
   return (
-    <div>
+    <div className="main-div">
       {error && <span>{error.message}</span>}
       {data.id && <CardList title={data.title} cards={data.cards} />}
     </div>

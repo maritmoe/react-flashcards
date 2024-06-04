@@ -9,3 +9,4 @@
 - Clone project
 - Install dependencies with `npm install`
 - Test project with `npm run dev`
+- The backend of the application is [csharp-flashcard-quiz](https://github.com/maritmoe/csharp-flashcard-quiz)

@@ -44,6 +44,8 @@ function CreateCard({ quizId, initialCards }) {
           response.json().then((data) => setError(data));
         }
       });
+    } else {
+      setError("Check that the card has a question and an answer");
     }
   };
 

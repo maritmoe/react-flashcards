@@ -1,0 +1,10 @@
+.title-box {
+  background-color: light-dark(lavenderblush, teal);
+  border-radius: 8px;
+  width: fit-content;
+  margin: auto;
+}
+
+.title-box > h3 {
+  padding: 20px;
+}

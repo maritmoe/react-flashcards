@@ -5,7 +5,7 @@ import "./CardList.css";
 function CardList({ title, cards }) {
   return (
     <>
-      <h2>{title}</h2>
+      <h2>{title} Quiz</h2>
       <ul className="flashcard-list">
         {cards.map((card) => (
           <Card key={card.question} card={card} />

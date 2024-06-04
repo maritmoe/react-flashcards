@@ -3,6 +3,10 @@
   width: 500px;
   padding: 10px;
   border-radius: 8px;
-  border: dotted;
   margin-bottom: 20px;
+  background-color: light-dark(lavenderblush, teal);
+}
+
+.overview-item > button {
+  background-color: light-dark(lightpink, cadetblue);
 }

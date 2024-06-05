@@ -10,3 +10,7 @@
 - Install dependencies with `npm install`
 - Test project with `npm run dev`
 - The backend of the application is [csharp-flashcard-quiz](https://github.com/maritmoe/csharp-flashcard-quiz)
+
+## Video Demonstration
+
+- For a look at the application without downloading the project you can watch this [demonstartion](./assets/demonstration.mp4)

@@ -13,4 +13,4 @@
 
 ## Video Demonstration
 
-- For a look at the application without downloading the project you can watch this [demonstartion](./assets/demonstration.mp4)
+- For a look at the application without downloading the project you can watch this [demonstration](./assets/demonstration.mp4)
